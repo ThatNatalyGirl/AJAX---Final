@@ -4,6 +4,11 @@ var TwitterApi = (function(options) {
 
 	function setupListeners() {
 		console.log('setupListeners()');
+
+		//set up two variables for the buttons
+		//
+		var url = 'twitter-proxy.php?op=search_tweets&':
+		
 	}
 
 	var init = function() {
