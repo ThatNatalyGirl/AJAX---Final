@@ -3,16 +3,93 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>I'm with the Band</title>
+		<title>I'm With The Band</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="dist/css/main.css">
 	</head>
 	<body>
-		
-			<img class="logo" src="dist/img/logo.png" alt="Circus Logo">
+		<header>
+			<img class="logo" src="dist/img/logo.png" alt="I'm With The Band Logo">
+			<h1>Search for you favorite artist to see where they will be touring soon!</h1>
+		</header>
+		<section class="sect-1">
+			<!-- <form>
+				<label>Choose a Band or Musician:
+					<input type="text" name="term" id="term" value="coffee"/>
+				</label>	 -->
 
+	<div>
+		<form name="timeline">
+			Twitter handle: <input name="screen_name" type="text"/>
+			<button type="submit">Get Timeline</button>
+			<div class="results">
+				<ul>
+				</ul>
+			</div>
+		</form>
+	</div>
+
+	<hr/>
+
+	<div>
+		<form name="search">
+			Query: <input name="q" type="text" />
+			<button type="submit">Quick Search</button>
+			<div class="results">
+				<ul>
+				</ul>
+			</div>
+		</form>
+	</div>
+
+	<hr/>
+
+
+
+
+
+<!-- 	<div>
+		<form name="search">
+			Query: <input name="q" type="text" />
+			Limit: <input name="count" type="number" />
+			Result Type:
+			<select name="result_type">
+				<option value="mixed">Default</option>
+				<option value="popular">Most popular</option>
+				<option value="recent">Most recent</option>
+			</select>
+			<button type="submit">Custom Search</button>
+			<div class="results">
+				<ul>
+				</ul>
+			</div>
+		</form>
+	</div> -->
+
+	<hr/>
+
+
+
+
+
+
+				<a id="search" href="#">Search</a>
+		
+		</section>
+		<div class="wrapper">
+			<section class="sect-2">
+				<ul id="results"></ul>
+			</section>
+			<section class="sect-3">
+				<div id="map"></div>
+			</section>
+		</div>
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		
+		<script src="dist/js/twitter.js"></script>
 		<script src="dist/js/main.js"></script>
 
 	</body>
