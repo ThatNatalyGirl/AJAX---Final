@@ -1,20 +1,26 @@
-'use strict';
+//"profile_image_url": "http://pbs.twimg.com/profile_images/880136122604507136/xHrnqf1T_normal.jpg",
 
-var TwitterApi = function (options) {
-	var shared = {};
-	var options = options || {};
 
-	function setupListeners() {
-		console.log('setupListeners()');
-	}
+// var TwitterApi = (function(options) {
+// 	var shared = {};
+// 	var options = options || {};
 
-	var init = function init() {
-		console.log('init()');
-	};
-	shared.init = init;
+// 	function setupListeners() {
+// 		console.log('setupListeners()');
 
-	return shared;
-}();
+// 		//set up two variables for the buttons
+// 		//
+// 		var url = 'twitter-proxy.php?op=search_tweets&';
 
-TwitterApi.init();
+// 	}
+
+
+// 	return getImage;
+// }());
+
+// TwitterApi.init();
+
+
+//statuses[0].user.profile_image_url
+"use strict";
 //# sourceMappingURL=twitter.js.map

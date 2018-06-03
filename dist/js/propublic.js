@@ -42,11 +42,15 @@ var PropublicModule = function () {
 				'X-API-Key': API_KEY
 			}
 		}).then(function (response) {
-			console.log('here is the get response data for key:', response.data, response);
+			// console.log('here is the get response data for key:', response.data, response);
 
+			// var twitterHandle = response.data.status.results.[0].members.[0 ... 99].[0].twitter_account
+			console.log(response.data.results["0"].members);
 			//run a function here and use the response.members
 		});
 	}
+
+	searchPropublic();
 
 	var congressImg = [];
 

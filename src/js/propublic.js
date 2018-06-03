@@ -41,12 +41,20 @@ var PropublicModule = (function () {
 				'X-API-Key': API_KEY
 			}
 		}).then(function (response) {
-			console.log('here is the get response data for key:', response.data, response);
+			// console.log('here is the get response data for key:', response.data, response);
+
+			var membersArray = response.data.status.results["0"].members
+			console.log(response.data.results["0"].members[0 ... 99]);
+
+			membersArray.forEach(member) => {
+				return = member.twitter_account;
+			}
 
 			//run a function here and use the response.members
 		});
 	}
 
+	searchPropublic();
 
 	var congressImg = [];
 
@@ -68,6 +76,7 @@ var PropublicModule = (function () {
 }());
 
 	PropublicModule.init();
+
 
 
 
