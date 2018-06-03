@@ -1,3 +1,6 @@
+//"profile_image_url": "http://pbs.twimg.com/profile_images/880136122604507136/xHrnqf1T_normal.jpg",
+
+
 var TwitterApi = (function(options) {
 	var shared = {};
 	var options = options || {};
@@ -11,12 +14,9 @@ var TwitterApi = (function(options) {
 		
 	}
 
-	var init = function() {
-		console.log('init()');
-	};
-	shared.init = init;
 
-	return shared;
+
+	return getImage;
 }());
 
 TwitterApi.init();
