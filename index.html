@@ -15,14 +15,15 @@
 			<h1>Take a Guess!</h1>
 		</header>
 		<section class="sect-1">
-			
 			<div class="picture"></div>
-
-			<a id="republican" href="#">Republican</a>
-			<a id="democratic" href="#">Democratic</a>
-			<a id="next" href="#">Next</a>
-		
+			<div class="wrapper">
+				<input id="republican" type="submit" value="Republican">
+				<input id="democratic" type="submit" value="Democratic">
+				<div class="result right"><img src="dist/img/right.jpg" alt="Way To Go"></div>
+				<div class="result wrong"><img src="dist/img/wrong.jpg" alt="Wrong"></div>
+			</div>	
 		</section>
+		<a id="next" href="#">Next</a>
 
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>	
 		<script src="dist/js/twitter.js"></script>
