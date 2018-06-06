@@ -1,25 +1,21 @@
-//"profile_image_url": "http://pbs.twimg.com/profile_images/880136122604507136/xHrnqf1T_normal.jpg",
+console.log(`Twits away`)
 
+var TwitterModule = (function(options) {
+	var shared = {};
+	
+	shared.lookUpUser = function(twitterHandle, callback) {
 
-// var TwitterApi = (function(options) {
-// 	var shared = {};
-// 	var options = options || {};
+		var url = 'twitter-proxy.php?op=user_profile&screen_name=' + twitterHandle;
+		axios.get(url, {}).then(function(response) {
+			var membersImg = response.data.profile_image_url;
+			console.log(membersImg);
+			//make the picture appear
 
-// 	function setupListeners() {
-// 		console.log('setupListeners()');
+			callback(membersImg);
+		})		
+	}
 
-// 		//set up two variables for the buttons
-// 		//
-// 		var url = 'twitter-proxy.php?op=search_tweets&';
-		
-// 	}
+	return shared
+})();
 
-
-
-// 	return getImage;
-// }());
-
-// TwitterApi.init();
-
-
-//statuses[0].user.profile_image_url
+//GET https://api.twitter.com/1.1/users/profile_banner.json?screen_name=twitterapi

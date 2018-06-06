@@ -91,9 +91,14 @@ header img {
 }
 
 .picture {
-	width: 100%;
-	height: 300px;
+	width: 510px;
+	height: 510px;
 	border: 5px solid blue;
+}
+
+.picture img {
+	width: 500px;
+	height: 500px;
 }
 
 .wrapper {
@@ -102,7 +107,7 @@ header img {
 	justify-content: space-around;
 }
 
-.wrapper #republican, .wrapper #democratic {
+.wrapper input {
 	text-decoration: none;
 	background: black;
 	font-size: 1.1em;
@@ -112,14 +117,15 @@ header img {
 	color: #fff;
 }
 
-.wrapper #republican:hover, .wrapper #democratic:hover {
+.wrapper input:hover {
 	background: green;
 }
 
-.result img {
+.result-right img, .result-wrong img {
 	width: 50%;
 	height: auto;
 	margin-left: 30%;
+	display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

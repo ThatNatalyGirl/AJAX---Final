@@ -1,20 +1,16 @@
 'use strict';
 
-console.log('I lived through this horror. I can take the next thing that comes along');
+console.log('live');
 
 var PropublicModule = function () {
 
 	var API_KEY = '3d4emVKIGokBm9UP9x2Nd8LECwP8or7MS6fBCSiB';
-	var picture = document.querySelector('.picture');
-	var republicanButton = document.querySelector('#republican');
-	var democraticButton = document.querySelector('#democratic');
-	var nextButton = document.querySelector('#next');
 
 	//create the arrays
 	var twitterArray = [];
 	var partyArray = [];
 
-	function searchPropublic() {
+	function searchPropublic(callback) {
 		axios.get('https://api.propublica.org/congress/v1/115/senate/members.json', {
 			headers: {
 				'X-API-Key': API_KEY
@@ -28,20 +24,16 @@ var PropublicModule = function () {
 				twitterArray.push(membersArray[i].twitter_account);
 				partyArray.push(membersArray[i].party);
 			}
+
+			callback(membersArray);
 		});
 	}
-	searchPropublic();
-	console.log('check twitter', twitterArray);
-	console.log('check party', partyArray);
+	// searchPropublic();	
+	// console.log('check twitter', twitterArray);
+	// console.log('check party', partyArray);
 
-	//not working
-	function getRandomMember(arr) {
-		var randomItem = arr[Math.floor(Math.random() * arr.length)];
-		console.log('rando', randomItem);
-		return randomItem;
-	}
 
-	getRandomMember(twitterArray);
+	// getRandomMember(twitterArray);
 
 	function checkCurrentParty(response) {
 		//make a function
@@ -57,15 +49,8 @@ var PropublicModule = function () {
 		console.log("check this", currentBusiness);
 	};
 
-	var init = function init() {
-		console.log('init()');
-	};
-
 	return {
-		search: searchPropublic,
-		init: init
+		search: searchPropublic
 	};
 }();
-
-PropublicModule.init();
 //# sourceMappingURL=propublic.js.map
