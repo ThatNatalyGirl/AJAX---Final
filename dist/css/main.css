@@ -101,6 +101,16 @@ header img {
 	height: 500px;
 }
 
+.picture a {
+	text-decoration: none;
+	background: black;
+	font-size: 1.1em;
+	padding: 20px 5%;
+	margin: 20px 5%;
+	border-radius: 20px;
+	color: #fff;
+}
+
 .wrapper {
 	display: flex;
 	width: 100%;
@@ -121,11 +131,19 @@ header img {
 	background: green;
 }
 
-.result-right img, .result-wrong img {
-	width: 50%;
-	height: auto;
+.result-right, .result-wrong {
+	width: 300px;
+	height: 200px;
 	margin-left: 30%;
 	display: none;
+}
+
+.wrong {
+	border: 10px solid red;
+}
+
+.right {
+	border: 10px solid green;
 }
 
 /*# sourceMappingURL=main.css.map */
