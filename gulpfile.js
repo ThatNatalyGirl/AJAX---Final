@@ -148,7 +148,7 @@ gulp.task('make-cool-shit', function () {
 gulp.task('start-browsersync', function() {
 	browserSync.init({ // start the browsersync mini-server
 		// server: "./", // on the root of the project
-		proxy: "localhost:8888"
+		proxy: "localhost:3000"
 	});
 })
 

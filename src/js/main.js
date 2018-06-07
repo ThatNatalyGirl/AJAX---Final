@@ -10,10 +10,10 @@ var wrongPic = document.querySelector('.result-wrong');
 
 nextButton.addEventListener('click', function (e) {
 	e.preventDefault();
-	democraticButton.classList.remove('.right');
-	republicanButton.classList.remove('.right');
-	democraticButton.classList.remove('.wrong');
-	republicanButton.classList.remove('.wrong');
+	democraticButton.classList.remove('right');
+	republicanButton.classList.remove('right');
+	democraticButton.classList.remove('wrong');
+	republicanButton.classList.remove('wrong');
 	rightPic.style.display = 'none';
 	wrongPic.style.display = 'none';
 
@@ -40,26 +40,38 @@ function getRandomMember(arr) {
 
 	//set up two variables for the buttons
 	democraticButton.addEventListener('click', function (e) {
+		democraticButton.classList.remove('right');
+		republicanButton.classList.remove('right');
+		democraticButton.classList.remove('wrong');
+		republicanButton.classList.remove('wrong');
+		rightPic.style.display = 'none';
+		wrongPic.style.display = 'none';
 		e.preventDefault();
 		if (randomMembersParty === "D") {
-			democraticButton.classList.add('.right');
+			democraticButton.classList.add('right');
 			rightPic.style.display = 'block';
 			console.log('Dem right')
 		} else {
-			democraticButton.classList.add('.wrong');
+			democraticButton.classList.add('wrong');
 			wrongPic.style.display = 'block';
 			console.log('Dem wrong')
 		}
 	});
 
 	republicanButton.addEventListener('click', function (e) {
+		democraticButton.classList.remove('right');
+		republicanButton.classList.remove('right');
+		democraticButton.classList.remove('wrong');
+		republicanButton.classList.remove('wrong');
+		rightPic.style.display = 'none';
+		wrongPic.style.display = 'none';
 		e.preventDefault();
 		if (randomMembersParty === "R") {
-			republicanButton.classList.add('.right');
+			republicanButton.classList.add('right');
 			rightPic.style.display = 'block';
 			console.log('Rep right')
 		} else {
-			republicanButton.classList.add('.wrong');
+			republicanButton.classList.add('wrong');
 			wrongPic.style.display = 'block';
 			console.log('Rep wrong')
 		}

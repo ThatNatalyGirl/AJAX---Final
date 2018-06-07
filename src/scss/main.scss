@@ -23,85 +23,169 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: #fff;
+	background: #39262b;
 	width: 100%;
 	height: 100vh;
+	font-family: 'Courgette', cursive;
+
+	.border{
+		background: #fff;
+		width: 90%;
+		height: 100%;
+		margin: 0 5%;
+	}
 }
 
 /* 2. Content ================================= */
 header{
+	text-align: center;
+	border-bottom: 5px solid #39262b;
+
 	img{
-		width: 50%;
+		width: 100%;
 		height: auto;
 	}
 }
 
-.sect-1{
+h1{
+	font-size: 2em;
+	color: #39262b;
+	margin: 0px 0 20px;
+}
+
+.background{
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	flex-wrap: no-wrap;
+	background: #ae9c9e;
+	height: 100%;
+	transition: .75s;
 }
 
+.sect-1, .sect-2{
+	flex: 1;
+	text-align: center;
+}
 .picture{
-	width: 510px;
-	height: 510px;
-	border: 5px solid blue;
+	width: 80%;
+	height: auto;
+	min-height: 200px;
+	border: 5px solid #39262b;
+	margin: 50px 10% 10px;
+	transition: .5s;
 
 	img{
-		width: 500px;
-		height: 500px;
-	}
-
-	a{
-		text-decoration: none;
-		background: black;
-		font-size: 1.1em;
-		padding: 20px 5%;
-		margin: 20px 5%;
-		border-radius: 20px;
-		color: #fff;
-	}
+		width: 100%;
+		height: auto;
+	}	
 }
 
 .wrapper{
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+	margin-bottom: 20px;
 	
 	input{
 		text-decoration: none;
-		background: black;
-		font-size: 1.1em;
+		background: #39262b;
+		font-size: 1.5em;
 		padding: 20px 5%;
 		margin: 20px 5%;
 		border-radius: 20px;
 		color: #fff;
+		font-family: 'Courgette', cursive;
+	}
 
+	.wrong{
+		color: #c0243a;
+	}
+
+	.right{
+		color: #22cc14;
+	}
+
+	.republican{
 		&:hover{
-			background: green;
+			background: #5f0822;
+		}
+	}
+
+	.democratic{
+		&:hover{
+			background: #3850c7;
 		}
 	}
 }
 
+#next{
+	text-decoration: none;
+	background: linear-gradient(to right, #5f0822 1%,#3850c7 100%);
+	font-size: 1.5em;
+	padding: 5px 5%;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+}
+
 .result-right, .result-wrong{
-	width: 300px;
-	height: 200px;
-	margin-left: 30%;
+	width: 50%;
+	margin-left: 25%;
+	height: auto;
 	display: none;
-	
-}
-
-.wrong{
-	border: 10px solid red;
-}
-
-.right{
-	border: 10px solid green;
+	text-align: center;
 }
 
 
+@media screen and (min-width: 550px){
+	header{
+		img{
+			width: 80%;
+		}
+	}
 
+	h1{
+		margin: 50px 0 20px;
+	}
 
+	.picture{
+		width: 60%;
+		transition: .5s;
+		margin: 50px 20% 20px;
+	}
+
+	.result-right, .result-wrong{
+		width: 30%;
+		margin-left: 35%;
+	}	
+}
+
+@media screen and (min-width: 800px){
+	header{
+		img{
+			width: 60%;
+		}
+	}
+
+	.background{
+		flex-direction: row;
+		flex-wrap: wrap;
+		transition: .75s;
+	}
+
+	.picture{
+		width: 90%;
+		transition: .5s;
+		margin: 50px 10% -20px;
+
+	}
+
+	.result-right, .result-wrong{
+		width: 60%;
+		margin-left: 18%;
+	}	
+}
 
 
 
