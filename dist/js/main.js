@@ -9,6 +9,16 @@ var nextButton = document.querySelector('#next');
 var rightPic = document.querySelector('.result-right');
 var wrongPic = document.querySelector('.result-wrong');
 
+//popup
+var popup = document.querySelector(".pop-up ");
+var popupButton = document.querySelector(".pop-up button");
+
+popupButton.addEventListener('click', function () {
+	popup.style.display = "none";
+});
+
+window.onload = populateSenator();
+
 nextButton.addEventListener('click', function (e) {
 	e.preventDefault();
 	democraticButton.classList.remove('right');
@@ -18,6 +28,10 @@ nextButton.addEventListener('click', function (e) {
 	rightPic.style.display = 'none';
 	wrongPic.style.display = 'none';
 
+	populateSenator();
+});
+
+function populateSenator() {
 	PropublicModule.search(function (members) {
 		console.log("members!", members);
 		var randomMember = getRandomMember(members);
@@ -30,7 +44,7 @@ nextButton.addEventListener('click', function (e) {
 			picture.innerHTML = '<img src=' + lrgString + '>';
 		});
 	});
-});
+}
 
 //getting a random member
 function getRandomMember(arr) {
